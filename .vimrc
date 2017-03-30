@@ -1,6 +1,63 @@
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.vim/plugged')
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Valloric/YouCompleteMe'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'kien/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'vim-ruby/vim-ruby'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-haml'
+Plug 'thoughtbot/vim-rspec'
+Plug 'plasticboy/vim-markdown'
+Plug 'othree/html5.vim'
+Plug 'honza/vim-snippets'
+Plug 'lokaltog/vim-powerline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'powerline/fonts'
+
+" colorthems
+Plug 'tomasr/molokai'
+Plug 'sickill/vim-monokai'
+
+" Initialize plugin system
+call plug#end()
+
+" keymappings
+
+map <C-n> :NERDTreeToggle<CR>
+map <Leader> <Plug>(easymotion-prefix)
+
+map <silent> <C-h> :call WinMove('h')<CR>
+map <silent> <C-j> :call WinMove('j')<CR>
+map <silent> <C-k> :call WinMove('k')<CR>
+map <silent> <C-l> :call WinMove('l')<CR>
+
+function! WinMove(key)
+  let t:curwin =winnr()
+    exec "wincmd ".a:key
+    if (t:curwin == winnr())
+      if (match(a:key,'[jk]'))
+        wincmd v
+      else
+        wincmd s
+      endif
+      exec "wincmd ".a:key
+    endif
+endfunction
+
+
 " Use the Solarized Dark theme
 set background=dark
-colorscheme solarized
+colorscheme monokai
 let g:solarized_termtrans=1
 
 " Make Vim more useful
