@@ -23,6 +23,7 @@ source bootstrap.sh
 ```bash
 source Pluginstall.sh
 ```
+Reload .vimrc and :PlugInstall to install plugins.
 
 ```bash
 source yourcompeteme_install.sh
