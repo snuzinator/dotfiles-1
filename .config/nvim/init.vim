@@ -19,7 +19,6 @@ Plug 'tpope/vim-haml'
 Plug 'thoughtbot/vim-rspec'
 Plug 'plasticboy/vim-markdown'
 Plug 'othree/html5.vim'
-Plug 'honza/vim-snippets'
 " powerline
 Plug 'lokaltog/vim-powerline'
 Plug 'edkolev/tmuxline.vim'
@@ -31,6 +30,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'tomasr/molokai'
 "Plug 'sickill/vim-monokai'
 Plug 'crusoexia/vim-monokai'
+" snipets
+Plug 'mattn/emmet-vim'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+
 " Initialize plugin system
 call plug#end()
 
