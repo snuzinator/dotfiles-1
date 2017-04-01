@@ -16,10 +16,22 @@ git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
-
+bash
 ```bash
 source bootstrap.sh
 ```
+```bash
+# clone
+git clone https://github.com/powerline/fonts.git
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+```
+Update your terminal configuration to use the new patched font. In Xubuntu, this can be done via Terminal window menu -> Edit -> Preferences -> Appearance -> Font. Select “Droid Sans Mono for Powerline”, when using the “Droid Sans Mono” font.
+
 ```bash
 source Pluginstall.sh
 ```
