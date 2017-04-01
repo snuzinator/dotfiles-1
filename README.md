@@ -49,6 +49,8 @@ vim
 source yourcompeteme_install.sh
 ```
 neovim
+Reload ~/.config/nvim/init.vim and :PlugInstall to install plugins.
+
 ```bash
 source yourcompeteme_install.sh
 sudo pip install -U neovim
