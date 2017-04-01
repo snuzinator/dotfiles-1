@@ -37,18 +37,22 @@ vim PlugInstall
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-nevim PlugInstall
+neovim PlugInstall
 ```bash
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 Reload .vimrc and :PlugInstall to install plugins.
-
+vim
 ```bash
 source yourcompeteme_install.sh
 ```
-
+neovim
+```bash
+source yourcompeteme_install.sh
+sudo pip install -U neovim
+```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
