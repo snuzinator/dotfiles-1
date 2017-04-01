@@ -20,10 +20,13 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'plasticboy/vim-markdown'
 Plug 'othree/html5.vim'
 Plug 'honza/vim-snippets'
+" powerline
 Plug 'lokaltog/vim-powerline'
 Plug 'edkolev/tmuxline.vim'
+" Fonts
 Plug 'powerline/fonts'
-
+" https://github.com/Yggdroot/indentLine
+Plug 'Yggdroot/indentLine'
 " colorthems
 Plug 'tomasr/molokai'
 Plug 'sickill/vim-monokai'
@@ -50,10 +53,17 @@ function! WinMove(key)
       else
         wincmd s
       endif
-      exec "wincmd ".a:key
+     exec "wincmd ".a:key
     endif
 endfunction
 
+" vertial column 80
+set smartindent
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+set colorcolumn=80
+set listchars=tab:\|\
+set list
 
 " Use the Solarized Dark theme
 set background=dark
