@@ -19,6 +19,9 @@ Plug 'tpope/vim-haml'
 Plug 'thoughtbot/vim-rspec'
 Plug 'plasticboy/vim-markdown'
 Plug 'othree/html5.vim'
+
+" ruby
+
 " powerline
 Plug 'lokaltog/vim-powerline'
 Plug 'edkolev/tmuxline.vim'
@@ -47,6 +50,11 @@ map <silent> <C-h> :call WinMove('h')<CR>
 map <silent> <C-j> :call WinMove('j')<CR>
 map <silent> <C-k> :call WinMove('k')<CR>
 map <silent> <C-l> :call WinMove('l')<CR>
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 function! WinMove(key)
   let t:curwin =winnr()
