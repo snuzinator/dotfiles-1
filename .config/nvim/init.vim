@@ -29,8 +29,8 @@ Plug 'powerline/fonts'
 Plug 'Yggdroot/indentLine'
 " colorthems
 Plug 'tomasr/molokai'
-Plug 'sickill/vim-monokai'
-
+"Plug 'sickill/vim-monokai'
+Plug 'crusoexia/vim-monokai'
 " Initialize plugin system
 call plug#end()
 
@@ -69,6 +69,7 @@ set list
 set background=dark
 colorscheme monokai
 let g:solarized_termtrans=1
+set t_Co=256
 
 " Make Vim more useful
 set nocompatible
