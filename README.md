@@ -32,9 +32,17 @@ rm -rf fonts
 ```
 Update your terminal configuration to use the new patched font. In Xubuntu, this can be done via Terminal window menu -> Edit -> Preferences -> Appearance -> Font. Select “Droid Sans Mono for Powerline”, when using the “Droid Sans Mono” font.
 
+vim PlugInstall
 ```bash
-source Pluginstall.sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+nevim PlugInstall
+```bash
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
 Reload .vimrc and :PlugInstall to install plugins.
 
 ```bash
