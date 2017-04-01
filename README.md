@@ -16,19 +16,43 @@ git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
-
+bash
 ```bash
 source bootstrap.sh
 ```
 ```bash
-source Pluginstall.sh
+# clone
+git clone https://github.com/powerline/fonts.git
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
 ```
-Reload .vimrc and :PlugInstall to install plugins.
+Update your terminal configuration to use the new patched font. In Xubuntu, this can be done via Terminal window menu -> Edit -> Preferences -> Appearance -> Font. Select “Droid Sans Mono for Powerline”, when using the “Droid Sans Mono” font.
 
+vim PlugInstall
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+neovim PlugInstall
+```bash
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Reload .vimrc and :PlugInstall to install plugins.
+vim
 ```bash
 source yourcompeteme_install.sh
 ```
-
+neovim
+```bash
+source yourcompeteme_install.sh
+sudo pip install -U neovim
+```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
