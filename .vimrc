@@ -20,10 +20,13 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'plasticboy/vim-markdown'
 Plug 'othree/html5.vim'
 Plug 'honza/vim-snippets'
+" powerline
 Plug 'lokaltog/vim-powerline'
 Plug 'edkolev/tmuxline.vim'
+" Fonts
 Plug 'powerline/fonts'
-
+" https://github.com/Yggdroot/indentLine
+Plug 'Yggdroot/indentLine'
 " colorthems
 Plug 'tomasr/molokai'
 Plug 'sickill/vim-monokai'
@@ -50,10 +53,17 @@ function! WinMove(key)
       else
         wincmd s
       endif
-      exec "wincmd ".a:key
+     exec "wincmd ".a:key
     endif
 endfunction
 
+" vertial column 80
+set smartindent
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+set colorcolumn=80
+set listchars=tab:\|\
+set list
 
 " Use the Solarized Dark theme
 set background=dark
@@ -102,9 +112,11 @@ set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
-set cursorline
+" set cursorline
 " Make tabs as wide as two spaces
+set expandtab
 set tabstop=2
+set sw=2
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -125,7 +137,7 @@ set nostartofline
 " Show the cursor position
 set ruler
 " Don’t show the intro message when starting Vim
-set shortmess=atI
+" set shortmess=atI
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
@@ -133,10 +145,10 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
+"if exists("&relativenumber")
+"	set relativenumber
+"	au BufReadPost * set relativenumber
+"endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
