@@ -25,6 +25,9 @@ Plug 'othree/html5.vim'
 " powerline
 Plug 'lokaltog/vim-powerline'
 Plug 'edkolev/tmuxline.vim'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Fonts
 Plug 'powerline/fonts'
 " https://github.com/Yggdroot/indentLine
@@ -80,7 +83,10 @@ set list
 " Use the Solarized Dark theme
 set background=dark
 colorscheme monokai
-let g:solarized_termtrans=1
+"let g:solarized_termtrans=1
+let g:Powerline_symbols = 'fancy'"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 set t_Co=256
 
 " Make Vim more useful
