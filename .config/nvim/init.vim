@@ -40,11 +40,19 @@ Plug 'crusoexia/vim-monokai'
 Plug 'mattn/emmet-vim'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-
+Plug 'ervandew/supertab'
 " Initialize plugin system
 call plug#end()
 
 " keymappings
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<s-j>"
+let g:UltiSnipsJumpForwardTrigger="<s-j>"
+let g:UltiSnipsJumpBackwardTrigger="<s-k>"
+
+"let g:UltiSnipsExpandTrigger="<space>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 map <C-n> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
