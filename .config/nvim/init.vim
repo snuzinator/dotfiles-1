@@ -3,9 +3,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
 Plug 'Valloric/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -43,7 +45,7 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 " Initialize plugin system
 call plug#end()
-
+let mapleader = "\<Space>"
 " keymappings
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<s-j>"
@@ -55,6 +57,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-k>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-i> :NERDTreeFind<CR>
+map <silent> <leader><leader> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
 
 map <silent> <C-h> :call WinMove('h')<CR>
