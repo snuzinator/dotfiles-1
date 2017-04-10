@@ -93,6 +93,8 @@ function! WinMove(key)
 endfunction
 
 " vertial column 80
+set nowrap " (no)wrap - динамический (не)перенос длинных строк
+set autoread " перечитывать изменённые файлы автоматически
 set smartindent
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
