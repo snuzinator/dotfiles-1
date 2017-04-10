@@ -58,6 +58,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-k>"
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-i> :NERDTreeFind<CR>
+"ignore python
+let NERDTreeIgnore = ['\.pyc$', '\.retry$']
+
 map <silent> <leader><leader> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
 
