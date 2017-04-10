@@ -3,7 +3,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'Valloric/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
@@ -45,6 +46,8 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 " Initialize plugin system
 call plug#end()
+
+
 let mapleader = "\<Space>"
 " keymappings
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
@@ -103,6 +106,10 @@ let g:Powerline_symbols = 'fancy'"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set t_Co=256
+
+"plugins config
+
+let g:neomake_ruby_enabled_makers = ['rubocop']
 
 " Make Vim more useful
 set nocompatible
