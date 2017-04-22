@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
 "Plug 'scrooloose/syntastic'
 Plug 'neomake/neomake'
 Plug 'Valloric/YouCompleteMe'
@@ -22,7 +23,7 @@ Plug 'tpope/vim-haml'
 Plug 'thoughtbot/vim-rspec'
 Plug 'plasticboy/vim-markdown'
 Plug 'othree/html5.vim'
-
+Plug '907th/vim-auto-save'
 " ruby
 
 " powerline
@@ -47,8 +48,25 @@ Plug 'ervandew/supertab'
 " Initialize plugin system
 call plug#end()
 
+" autosave vim-auto-save
+let g:auto_save = 1
+let g:auto_save_events = ["TextChanged"]
 
-let mapleader = "\<Space>"
+"set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+"imap :!setxkbmap us:!setxkbmap us,ru
+"nmap :!setxkbmap us:!setxkbmap us,ru
+let g:indentLine_color_term = 239
+
+" Plug 'scrooloose/nerdcommenter'
+let g:NERDCustomDelimiters = { 'ruby': { 'left': '#', 'leftAlt': 'FOO', 'rightAlt': 'BAR' } }
+
+
+"set keymap=russian-jcukenwin
+"set iminsert=0
+"set imsearch=0
+"highlight lCursor guifg=NONE guibg=Cyan
+
+let mapleader = ","
 " keymappings
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<s-j>"
