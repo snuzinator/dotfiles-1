@@ -60,7 +60,6 @@ let g:indentLine_color_term = 239
 " Plug 'scrooloose/nerdcommenter'
 let g:NERDCustomDelimiters = { 'ruby': { 'left': '#', 'leftAlt': 'FOO', 'rightAlt': 'BAR' } }
 
-
 "set keymap=russian-jcukenwin
 "set iminsert=0
 "set imsearch=0
