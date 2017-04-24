@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/snuz/.oh-my-zsh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# history auto
+#plugins=(zsh-autosuggestions)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -83,3 +86,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
