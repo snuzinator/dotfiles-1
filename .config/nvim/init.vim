@@ -1,7 +1,14 @@
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.local/share/nvim/plugged') " neovim
 "call plug#begin('~/.vim/plugged') " vim
-
+"zeal
+Plug 'KabbAmine/zeavim.vim', {'on': [
+			\	'Zeavim', 'Docset',
+			\	'<Plug>Zeavim',
+			\	'<Plug>ZVVisSelection',
+			\	'<Plug>ZVKeyDocset',
+			\	'<Plug>ZVMotion'
+			\ ]}
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -49,6 +56,14 @@ Plug 'ervandew/supertab'
 " Initialize plugin system
 call plug#end()
 
+" zeal path
+let g:zv_docsets_dir = '/home/snuz/.local/share/Zeal/Zeal/docsets/'
+" zeal nmap
+nmap gzz <Plug>Zeavim
+vmap gzz <Plug>ZVVisSelection
+nmap gZ <Plug>ZVKeyDocset<CR>
+nmap gz <Plug>ZVMotion
+nmap <leader>z <Plug>ZVKeyDocset
 " autosave vim-auto-save
 let g:auto_save = 1
 let g:auto_save_events = ["TextChanged"]
