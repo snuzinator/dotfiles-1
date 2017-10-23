@@ -209,3 +209,7 @@ vmap gzz <Plug>ZVVisSelection
 nmap gZ <Plug>ZVKeyDocset<CR>
 nmap gz <Plug>ZVMotion
 nmap <leader>z <Plug>ZVKeyDocset
+
+map <silent> <leader><leader> :NERDTreeToggle<CR>
+let mapleader = ","
+map <silent> // :nohlsearch<CR>
