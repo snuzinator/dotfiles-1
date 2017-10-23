@@ -28,6 +28,8 @@ Plug 'othree/html5.vim'
 " powerline
 Plug 'lokaltog/vim-powerline'
 Plug 'edkolev/tmuxline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Fonts
 Plug 'powerline/fonts'
 " https://github.com/Yggdroot/indentLine
@@ -184,3 +186,10 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+"Power line
+"let g:Powerline_symbols = 'fancy'
+
+"Airline :help Airline
+let g:airline_theme='wombat'
+let g:airline_powerline_fonts = 1
