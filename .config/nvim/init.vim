@@ -100,7 +100,7 @@ let NERDTreeIgnore = ['\.pyc$', '\.retry$']
 map <silent> <leader><leader> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
 
-map <silent> // :nohlsearch<CR>
+nmap <silent> // :nohlsearch<CR>
 
 map <silent> <C-h> :call WinMove('h')<CR>
 map <silent> <C-j> :call WinMove('j')<CR>

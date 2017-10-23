@@ -212,4 +212,4 @@ nmap <leader>z <Plug>ZVKeyDocset
 
 map <silent> <leader><leader> :NERDTreeToggle<CR>
 let mapleader = ","
-map <silent> // :nohlsearch<CR>
+nmap <silent> // :nohlsearch<CR>
