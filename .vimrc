@@ -6,7 +6,14 @@ endif
 
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.vim/plugged')
-
+"zeal
+Plug 'KabbAmine/zeavim.vim', {'on': [
+			\	'Zeavim', 'Docset',
+			\	'<Plug>Zeavim',
+			\	'<Plug>ZVVisSelection',
+			\	'<Plug>ZVKeyDocset',
+			\	'<Plug>ZVMotion'
+			\ ]}
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Valloric/YouCompleteMe'
@@ -193,3 +200,12 @@ endif
 "Airline :help Airline
 let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
+
+" zeal path
+let g:zv_docsets_dir = '/home/snuz/.local/share/Zeal/Zeal/docsets/'
+" zeal nmap
+nmap gzz <Plug>Zeavim
+vmap gzz <Plug>ZVVisSelection
+nmap gZ <Plug>ZVKeyDocset<CR>
+nmap gz <Plug>ZVMotion
+nmap <leader>z <Plug>ZVKeyDocset
