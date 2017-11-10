@@ -49,6 +49,8 @@ Plug 'crusoexia/vim-monokai'
 Plug 'mattn/emmet-vim'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+"search fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 
 " Initialize plugin system
 call plug#end()
@@ -213,3 +215,7 @@ nmap <leader>z <Plug>ZVKeyDocset
 map <silent> <leader><leader> :NERDTreeToggle<CR>
 let mapleader = ","
 nmap <silent> // :nohlsearch<CR>
+"key map fzf
+nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
